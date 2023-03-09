@@ -19,7 +19,8 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Despesas Pessoais')),
-        body: Column(
+        body: SingleChildScrollView(
+            child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Container(
@@ -31,6 +32,6 @@ class MyHomePage extends StatelessWidget {
             ),
             TransactionUser(),
           ],
-        ));
+        )));
   }
 }
