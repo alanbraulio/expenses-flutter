@@ -40,8 +40,8 @@ class MyHomePage extends StatelessWidget {
             Container(
               child: const Card(
                 color: Colors.blue,
-                child: Text('Gráfico'),
                 elevation: 5,
+                child: Text('Gráfico'),
               ),
             ),
             Column(
@@ -50,23 +50,36 @@ class MyHomePage extends StatelessWidget {
                   child: Row(
                     children: [
                       Container(
-                        margin: const EdgeInsets.symmetric(
-                          horizontal: 15,
-                          vertical: 10
-                        ),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: Colors.black,
-                            width: 2
-                          )
-                        ),
-                        padding: const EdgeInsets.all(10),
-                        child: Text(tr.value.toString())
-                      ),
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 10),
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: Colors.purple.shade50, width: 2)),
+                          padding: const EdgeInsets.all(10),
+                          child: Text(
+                            tr.value.toString(),
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: Colors.purple,
+                            ),
+                          )),
                       Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(tr.title),
-                          Text(tr.date.toString())
+                          Text(
+                            tr.title,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            tr.date.toString(),
+                            style: const TextStyle(
+                              color: Colors.grey,
+                            ),
+                          )
                         ],
                       )
                     ],
